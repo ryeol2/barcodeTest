@@ -45,7 +45,7 @@
             codeReader.getVideoInputDevices()
                 .then((videoInputDevices) => {
                     const sourceSelect = document.getElementById('sourceSelect')
-                    selectedDeviceId = videoInputDevices[videoInputDevices.length].deviceId
+                    selectedDeviceId = videoInputDevices[videoInputDevices.length-1].deviceId
                     if (videoInputDevices.length > 1) {
                         videoInputDevices.forEach((element) => {
                             const sourceOption = document.createElement('option')
