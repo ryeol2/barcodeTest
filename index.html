@@ -40,11 +40,11 @@
     <script type="text/javascript">
         window.addEventListener('load', function () {
             let selectedDeviceId;
-            const codeReader = new ZXing.BrowserBarcodeReader()
-            console.log('ZXing code reader initialized')
+            const codeReader = new ZXing.BrowserBarcodeReader();
             codeReader.getVideoInputDevices()
                 .then((videoInputDevices) => {
-                    const sourceSelect = document.getElementById('sourceSelect')
+                    const sourceSelect = document.getElementById('sourceSelect');
+                    console.log('dfsdfasdf-> ', videoInputDevices);
                     selectedDeviceId = videoInputDevices[videoInputDevices.length-1].deviceId
                     if (videoInputDevices.length > 1) {
                         videoInputDevices.forEach((element) => {
@@ -70,11 +70,11 @@
                         })
                     console.log(`Started continous decode from camera with id ${selectedDeviceId}`)
 
-                })
+                });
                 .catch((err) => {
                     console.error(err)
-                })
-        })
+                });
+        });
     </script>
 
 </body>
